@@ -82,7 +82,7 @@ class Todo extends Access
         $name = $this->rcv('name');
         $email = $this->rcv('email');
         $note = $this->rcv('note');
-        $completed = $this->rcv('completed');
+        $completed = (int)$this->rcv('completed');
 
         $res = $this->mTask->upd($id, [
             'name' => $name,
