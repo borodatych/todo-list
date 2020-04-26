@@ -123,6 +123,36 @@ $isAuth = (int)\App\Helpers\Arr::exist($isAuth);
             <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
                 <!-- begin:: Content -->
                 <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+                    <div class="alert alert-danger" role="alert">
+                        <div class="alert-text">
+                            <h4 class="alert-heading">Dear Friend!</h4>
+                            <p>
+                                The project was made as part of a test task.
+                                No complicated authorization. Access for admin: admin / 123.
+                                Huge request not to touch other people's tasks and creating your own, be guided by the culture of speech and norms of behavior.
+                                In general, you understand!
+                            </p>
+                            <hr>
+                            <p class="mb-0">
+                                <a href="https://github.com/borodatych/todo-list" target="_blank" class="kt-link">GitHub Fork</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        <div class="alert-text">
+                            <h4 class="alert-heading">По братски!</h4>
+                            <p>
+                                Проект сделан в рамках тестового задания.
+                                Нет сложной авторизации. Доступ для админа: admin / 123 .
+                                Ограмноя просьба не трогать чужие таски и создавая свои, руководствуйтесь культурой речи и нормами поведения.
+                                В общем, вы поняли!
+                            </p>
+                            <hr>
+                            <p class="mb-0">
+                                <a href="https://github.com/borodatych/todo-list" target="_blank" class="kt-link">GitHub Fork</a>
+                            </p>
+                        </div>
+                    </div>
                     <?=\App\Helpers\Arr::exist($content)?>
                 </div>
                 <!-- end:: Content -->
@@ -136,6 +166,7 @@ $isAuth = (int)\App\Helpers\Arr::exist($isAuth);
                     </div>
                     <div class="kt-footer__menu">
                         <a href="http://demka.org" target="_blank" class="kt-link">About</a>
+                        <a href="https://github.com/borodatych/todo-list" target="_blank" class="kt-link">GitHub Fork</a>
                         <a href="https://tezarius.ru" target="_blank" class="kt-link">Tezarius Team</a>
                         <a href="https://yulsun.ru" target="_blank" class="kt-link">Yulsun Team</a>
                     </div>
