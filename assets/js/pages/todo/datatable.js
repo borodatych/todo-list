@@ -20,6 +20,9 @@ const KTDatatableRemoteAjax = function(){
 			}, {
 				field: 'name',
 				title: 'Name',
+			},  {
+				field: 'note',
+				title: 'Task',
 			}, {
 				field: 'status',
 				title: 'Status',
