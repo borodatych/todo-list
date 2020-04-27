@@ -18,7 +18,7 @@
 
     <!--begin::Global Theme Styles(used by all pages) -->
     <link href="/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style.bundle.css?2" rel="stylesheet" type="text/css" />
     <!--end::Global Theme Styles -->
 
     <!--begin::Page Vendors Styles(used by this page) -->
@@ -225,8 +225,8 @@ $isAuth = (int)\App\Helpers\Arr::exist($isAuth);
 
 
 <!--begin::Global Theme Bundle(used by all pages) -->
-<script src="/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
-<script src="/assets/js/scripts.bundle.js" type="text/javascript"></script>
+<script src="/assets/plugins/global/plugins.bundle.js?2" type="text/javascript"></script>
+<script src="/assets/js/scripts.bundle.js?2" type="text/javascript"></script>
 <!--end::Global Theme Bundle -->
 
 
