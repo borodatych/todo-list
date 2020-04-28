@@ -120,7 +120,7 @@ const TDListForm = function () {
             if ( data.status && data.item ) {
                 $('#tdName').val(data.item.name);
                 $('#tdEmail').val(data.item.email);
-                $('#tdNote').val(data.item.note);
+                $('#tdNote').html(data.item.note);
                 $('#tdCompleted').prop('checked',( data.item.completed * 1 > 1 ));
                 $('#toDoList').modal()
             }
