@@ -31,7 +31,7 @@ CREATE TABLE `tasks` (
   `name` varchar(50) NOT NULL,
   `email` varchar(150) NOT NULL,
   `note` text NOT NULL,
-  `completed` tinyint(1) NOT NULL DEFAULT '0',
+  `completed` tinyint(1) NOT NULL DEFAULT 1,
   `create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update` timestamp NULL DEFAULT NULL,
   KEY `id` (`id`)

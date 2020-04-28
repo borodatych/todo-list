@@ -30,9 +30,9 @@ const KTDatatableRemoteAjax = function(){
 				// callback function support for column rendering
 				template: (row) => {
 					let status = {
-						0: {'title': 'Pending', 'class': 'kt-badge--metal'},
-						1: {'title': 'Success', 'class': ' kt-badge--success'},
-						'-1': {'title': 'Canceled', 'class': ' kt-badge--danger'},
+						1: {'title': 'Pending', 'class': 'kt-badge--metal'},
+						2: {'title': 'Success', 'class': ' kt-badge--success'},
+						0: {'title': 'Canceled', 'class': ' kt-badge--danger'},
 					};
 					return '<span class="kt-badge ' + status[row.completed].class + ' kt-badge--inline kt-badge--pill">' + status[row.completed].title + '</span>';
 				},
@@ -118,7 +118,7 @@ const KTDatatableRemoteAjax = function(){
 			datatable.search($(this).val().toLowerCase(), 'completed');
 		});
 
-		datatable.on( 'kt-datatable--on-init', function(){
+		datatable.on('kt-datatable--on-layout-updated', function(){
 			$('.kt_datatable button.btn-action').on('click',function(){
 				let $ths = $(this);
 				let id = $ths.data('id');

@@ -72,7 +72,7 @@ class Task extends Model
                 if( 'completed' === $field ) $completedExist = TRUE;
             }
             ///$fields = rtrim($fields,',');
-            if( !$completedExist ) $fields .= "`completed`=0,";
+            if( !$completedExist ) $fields .= "`completed`=1,";
             $fields .= "`update`=NOW()";
             ///
             $sql = "UPDATE tasks SET {$fields} WHERE id={$id}";
@@ -86,7 +86,7 @@ class Task extends Model
     {
         $ans = [];
         ///$sql = "DELETE FROM tasks WHERE id={$id}";
-        $sql = "UPDATE tasks SET completed=-1 WHERE id={$id}";
+        $sql = "UPDATE tasks SET completed=0 WHERE id={$id}";
         $this->db->query($sql);
         $ans['status'] = Arr::get($this->db,'affected_rows');
         return $ans;

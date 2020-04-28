@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleTextarea">Note:</label>
-                                        <textarea id="tdNote" name="note" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                                        <textarea id="tdNote" name="note" class="form-control" rows="3"></textarea>
                                     </div>
                                     <?php if( (int)\App\Helpers\Arr::get($session,'isAuth') ): ?>
                                     <div class="form-group row  form-group-last">
@@ -41,7 +41,7 @@
                                         <div class="col-6">
                                             <span class="kt-switch">
                                                 <label>
-                                                    <input type="checkbox" id="tdCompleted" name="completed" value="1" />
+                                                    <input type="checkbox" id="tdCompleted" name="completed" value="2" />
                                                     <span></span>
                                                 </label>
                                             </span>
@@ -82,9 +82,9 @@
                                 <div class="kt-form__control">
                                     <select class="form-control bootstrap-select" id="kt_form_status">
                                         <option value="">All</option>
-                                        <option value="0">Pending</option>
-                                        <option value="1">Success</option>
-                                        <option value="-1">Canceled</option>
+                                        <option value="1">Pending</option>
+                                        <option value="2">Success</option>
+                                        <option value="0">Canceled</option>
                                     </select>
                                 </div>
                             </div>
