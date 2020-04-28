@@ -23,7 +23,7 @@ class Todo extends Access
     {
         /// Подключаем скрипты для это страницы
         /// $this->arrCSS[] = '';
-        $this->arrJS[] = '/assets/js/pages/todo/datatable.js?2';
+        $this->arrJS[] = '/assets/js/pages/todo/datatable.js?3';
         $this->arrJS[] = '/assets/js/pages/todo/form.js?1';
 
         $this->template->content = $this->partial('Sections',[]);
