@@ -121,9 +121,7 @@ const TDListForm = function () {
                 $('#tdName').val(data.item.name);
                 $('#tdEmail').val(data.item.email);
                 $('#tdNote').val(data.item.note);
-                if ( data.item.completed * 1 > 0 ) {
-                    $('#tdCompleted').prop('checked',true)
-                }
+                $('#tdCompleted').prop('checked',( data.item.completed * 1 > 1 ));
                 $('#toDoList').modal()
             }
         }).fail(function(error) {
