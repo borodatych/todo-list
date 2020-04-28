@@ -76,7 +76,7 @@ class Todo extends Access
     }
     public function action_upd()
     {
-        if( !$this->session->isAuth ) $this->notFound();
+        if( !$this->session->isAuth ) $this->accessDenied();
 
         $id = $this->rcv('id');
         $name = $this->rcv('name');
@@ -102,7 +102,7 @@ class Todo extends Access
     public function action_del()
     {
         $this->isAjax = TRUE;
-        if( !$this->session->isAuth ) $this->notFound();
+        if( !$this->session->isAuth ) $this->accessDenied();
 
 
         $id = $this->rcv('id');

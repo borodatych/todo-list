@@ -23,7 +23,8 @@ $config['default']['url'] = $config['default']['scheme'].'://'.$config['default'
  * $config['default']['db']['password'] = 'pass';
  */
 
-/// 404 Default Page
+/// Default Error Pages
+$config['default']['401'] = '401Lite';
 $config['default']['404'] = '404Lite';
 
 /// Revision | Reset Cash

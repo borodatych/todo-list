@@ -287,6 +287,13 @@ class Route
         $error404 = new View("Errors/$view");
         $error404->render(true);
     }
+    public static function AccessDenied($view=NULL)
+    {
+        header("HTTP/1.0 401 Unauthorized");
+        if( !$view ) $view = ( $_v = Config::item('401') ) ? $_v : '401';
+        $error404 = new View("Errors/$view");
+        $error404->render(true);
+    }
 
     /**
      * Route::loadController()

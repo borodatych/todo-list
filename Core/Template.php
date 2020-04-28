@@ -136,6 +136,12 @@ class Template extends Controller
         Route::NotFound();
         exit;
     }
+    public function accessDenied()
+    {
+        $this->isAjax = TRUE;
+        Route::AccessDenied();
+        exit;
+    }
     /// Закрываем, иначе все не найденные методы будут через index проходить
     final function action_index() { $this->notFound(); }
 }
