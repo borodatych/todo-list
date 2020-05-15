@@ -27,41 +27,15 @@ require_once ROOT.'/App/Routes.php';
 require_once ROOT.'/App/Config.php';
 
 
-use \Core\Config;
-use \Core\Database;
-use \Core\Route;
-
 try
 {
-    /// Setup the database connection
-    Database::$db = new Database(
-        Config::$config[Config::$conf]['db']['host'],
-        Config::$config[Config::$conf]['db']['user'],
-        Config::$config[Config::$conf]['db']['pass'],
-        Config::$config[Config::$conf]['db']['base'],
-        Config::$config[Config::$conf]['db']['port'],
-        Config::$config[Config::$conf]['db']['sock']
-    );
-    Database::exec("SET NAMES 'utf8'");
-
     /// Setup the routes
-    $route = new Route();
+    $route = new \Core\Route();
     $route->init();
 }
-/*/
-catch(PDOException $e)
-{
-    echo 'Database Error: ' . $e->getMessage() . "\n<br />";
-    echo 'File: ' . $e->getFile() . "\n<br />";
-    echo 'Line: ' . $e->getLine();
-}
-//*/
 catch(Exception $e)
 {
     echo 'Error: ' . $e->getMessage() . "\n<br />";
     echo 'File: ' . $e->getFile() . "\n<br />";
     echo 'Line: ' . $e->getLine();
 }
-
-
-if( Database::$db ) Database::$db->close();

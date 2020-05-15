@@ -26,7 +26,19 @@ class Model extends Core
      */
     public function __construct()
     {
-        $this->db = Database::$db;
-        ///$this->db->query("SET NAMES 'utf8'");
+        parent::__construct();
+
+        $this->db = new Database(
+            Config::$config[Config::$conf]['db']['host'],
+            Config::$config[Config::$conf]['db']['user'],
+            Config::$config[Config::$conf]['db']['pass'],
+            Config::$config[Config::$conf]['db']['base'],
+            Config::$config[Config::$conf]['db']['port'],
+            Config::$config[Config::$conf]['db']['sock']
+        );
+    }
+    public function __destruct()
+    {
+        if( $this->db ) $this->db->close();
     }
 }
