@@ -28,23 +28,6 @@ class Controller extends Overloading
     }
 
     /**
-     * Debug
-     */
-    protected function p(){
-        $numArgs = func_num_args();
-        $argList = func_get_args();
-        ///if( $numArgs > 2 ){
-            foreach( $argList AS $arg ){ print'<pre>';print_r($arg);print'</pre>'; }
-        ///}
-        ///print'<pre>';print_r($arr);print'</pre>';
-    }
-    protected function e()
-    {
-        $argList = func_get_args();
-        foreach( $argList AS $arg ){ print'<pre>';print_r($arg);print'</pre>'; }
-        exit;
-    }
-    /**
      * метод проверяет, была ли отправлена форма по наличию имени кнопки в массиве $_POST
      * кроме того происходит проверка referer
      * Возвращает TRUE при выполнении условий и значение, если оно есть, в объект
@@ -95,7 +78,7 @@ class Controller extends Overloading
         echo $msg;
         if( $exit ) exit;
     }
-    protected function ajaxRequest(){
+    protected function isAjax(){
         return HTTP::isAjax(); /// Если нужно удалить хелпер, переносим код сюда
     }
 

@@ -29,7 +29,7 @@ class Base extends Template
         /// if( in_array($this->ip(),$blockIPs) ) $this->notFound();
 
         /// This is Ajax ?
-        $this->isAjax = $this->ajaxRequest();
+        $this->isAjax = $this->isAjax();
 
         /// This is Bot ?
         $this->isBot = $this->isBot();
