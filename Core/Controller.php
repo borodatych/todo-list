@@ -67,7 +67,7 @@ class Controller extends Overloading
         return TRUE;
     }
     /** Получение переменной из POST или GET */
-    protected function rcv($varname,$def=""){
+    protected function receive($varname,$def=""){
         $dt = @$_POST[$varname];
         /// Это что бы не поломалось. НО! Лучше заюзать jPost + Arr::get
         if( !$dt ){

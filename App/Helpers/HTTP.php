@@ -142,7 +142,7 @@ class HTTP
         }
     }
     /** Получение переменной из POST или GET */
-    public static function rcv($varname,$def=""){
+    public static function receive($varname,$def=""){
         $dt = @$_POST[$varname];
         /// Это что бы не поломалось. НО! Лучше заюзать jPost + Arr::get
         if( !$dt ){

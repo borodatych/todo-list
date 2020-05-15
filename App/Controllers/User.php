@@ -18,8 +18,8 @@ class User extends Base
         $md5 = $check = NULL;
         if( $this->isFormSubmitted() )
         {
-            $login = $this->rcv('login');
-            $password = $this->rcv('password');
+            $login = $this->receive('login');
+            $password = $this->receive('password');
 
             /// admin 123
             $md5 = '0192023a7bbd73250516f069df18b500';

@@ -46,7 +46,7 @@ class Todo extends Access
     }
     public function action_get()
     {
-        $id = $this->rcv('id');
+        $id = $this->receive('id');
         $res = $this->mTask->get($id);
 
         $status = Arr::get($res,'status');
@@ -60,9 +60,9 @@ class Todo extends Access
 
     public function action_add()
     {
-        $name = $this->rcv('name');
-        $email = $this->rcv('email');
-        $note = $this->rcv('note');
+        $name = $this->receive('name');
+        $email = $this->receive('email');
+        $note = $this->receive('note');
 
         $res = $this->mTask->add($name,$email,$note);
 
@@ -78,11 +78,11 @@ class Todo extends Access
     {
         if( !$this->session->isAuth ) $this->accessDenied();
 
-        $id = $this->rcv('id');
-        $name = $this->rcv('name');
-        $email = $this->rcv('email');
-        $note = $this->rcv('note');
-        $completed = (int)$this->rcv('completed');
+        $id = $this->receive('id');
+        $name = $this->receive('name');
+        $email = $this->receive('email');
+        $note = $this->receive('note');
+        $completed = (int)$this->receive('completed');
 
         $res = $this->mTask->upd($id, [
             'name' => $name,
@@ -105,7 +105,7 @@ class Todo extends Access
         if( !$this->session->isAuth ) $this->accessDenied();
 
 
-        $id = $this->rcv('id');
+        $id = $this->receive('id');
 
         $res = $this->mTask->del($id);
 
