@@ -19,14 +19,9 @@ class Database
     protected $query_closed = TRUE;
     public $query_count = 0;
 
-    /**
-     * Database::__construct()
-     *
-     * Calls the MySQLi construct to connect to the database
-     */
-    public function __construct($host, $user, $pass, $base, $port, $sock)
+    public function __construct($host, $user, $pass, $base, $port = NULL, $sock = NULL)
     {
-        $this->connection = new \MySQLi($host, $user, $pass, $base);
+        $this->connection = new \MySQLi($host, $user, $pass, $base, $port, $sock);
 
         if( $this->connection->connect_error )
         {
