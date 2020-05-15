@@ -1,12 +1,14 @@
 <?php
 
+use \Core\Config;
+
 /// current config that we'll be using
-$conf = 'default';
+Config::$conf = 'default';
 
 /// url path to application
-$config['default']['scheme'] = @$_SERVER['REQUEST_SCHEME'];
-$config['default']['host'] = @$_SERVER['HTTP_HOST'];
-$config['default']['url'] = $config['default']['scheme'].'://'.$config['default']['host'];
+Config::$config['default']['scheme'] = @$_SERVER['REQUEST_SCHEME'];
+Config::$config['default']['host'] = @$_SERVER['HTTP_HOST'];
+Config::$config['default']['url'] = Config::$config['default']['scheme'].'://'.Config::$config['default']['host'];
 
 
 /**
@@ -18,26 +20,26 @@ $config['default']['url'] = $config['default']['scheme'].'://'.$config['default'
  *
  *
  * PDO
- * $config['default']['db']['dsn']      = 'mysql:host=localhost;dbname=base';
- * $config['default']['db']['user']     = 'user';
- * $config['default']['db']['password'] = 'pass';
+ * Config::$config['default']['db']['dsn']      = 'mysql:host=localhost;dbname=base';
+ * Config::$config['default']['db']['user']     = 'user';
+ * Config::$config['default']['db']['password'] = 'pass';
  */
 
 /// Default Error Pages
-$config['default']['401'] = '401Lite';
-$config['default']['404'] = '404Lite';
+Config::$config['default']['401'] = '401Lite';
+Config::$config['default']['404'] = '404Lite';
 
 /// Revision | Reset Cash
-$config['default']['revision']['js']   = 1;
-$config['default']['revision']['css']  = 1;
+Config::$config['default']['revision']['js']   = 1;
+Config::$config['default']['revision']['css']  = 1;
 
 /// MySQL Connect
-$config['default']['db']['host'] = 'db_host';
-$config['default']['db']['user'] = 'db_user';
-$config['default']['db']['pass'] = 'db_pass';
-$config['default']['db']['base'] = 'db_name';
-$config['default']['db']['port'] = 'db_port';
-$config['default']['db']['sock'] = '/var/run/mysqld/mysqld.sock';
+Config::$config['default']['db']['host'] = 'db_host';
+Config::$config['default']['db']['user'] = 'db_user';
+Config::$config['default']['db']['pass'] = 'db_pass';
+Config::$config['default']['db']['base'] = 'db_name';
+Config::$config['default']['db']['port'] = 'db_port';
+Config::$config['default']['db']['sock'] = '/var/run/mysqld/mysqld.sock';
 
 
 /**
@@ -56,6 +58,3 @@ $config['default']['db']['sock'] = '/var/run/mysqld/mysqld.sock';
  * Core/Route.php => loadController
  *---------------------------------------------------------------------------------------------------------------------*
  */
-
-
-
